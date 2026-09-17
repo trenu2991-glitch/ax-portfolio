@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>정민재 · 급식 알레르기 표시 보조 포트폴리오</title>
+  <style>
+    :root {
+      --primary-color: #ea580c;
+      --primary-hover: #c2410c;
+      --primary-soft: #fff7ed;
+      --primary-border: #fed7aa;
+      --text-main: #1c1917;
+      --text-muted: #57534e;
+      --bg-page: #fafaf9;
+      --bg-card: #ffffff;
+      --border-color: #e7e5e4;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 14px;
+      --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* 헤더 및 첫 화면 */
+    header {
+      padding: 48px 0 36px;
+      text-align: center;
+      background: linear-gradient(180deg, #fff7ed 0%, var(--bg-page) 100%);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      background-color: #ffedd5;
+      color: var(--primary-hover);
+      font-size: 0.85rem;
+      font-weight: 600;
+      border-radius: 9999px;
+      margin-bottom: 16px;
+      border: 1px solid var(--primary-border);
+    }
+
+    h1.hero-title {
+      font-size: 1.85rem;
+      font-weight: 700;
+      line-height: 1.35;
+      color: #0c0a09;
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+
+    .hero-desc {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 640px;
+      margin: 0 auto 24px;
+      word-break: keep-all;
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .metric-card {
+      background: var(--bg-card);
+      border: 1px solid var(--primary-border);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .metric-value {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin-bottom: 4px;
+    }
+
+    .metric-label {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    /* 공통 섹션 스타일 */
+    section {
+      padding: 44px 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .section-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #0c0a09;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 1.1em;
+      background-color: var(--primary-color);
+      border-radius: 2px;
+    }
+
+    .section-desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      word-break: keep-all;
+    }
+
+    /* 문제 섹션 */
+    .problem-box {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .problem-flow {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .flow-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.95rem;
+    }
+
+    .flow-tag {
+      background-color: #fee2e2;
+      color: #b91c1c;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: var(--radius-sm);
+      white-space: nowrap;
+      margin-top: 2px;
+    }
+
+    /* 도구 섹션 */
+    .tool-card {
+      background-color: var(--bg-card);
+      border: 2px solid var(--primary-border);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .input-group {
+      margin-bottom: 16px;
+    }
+
+    .input-label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.92rem;
+      margin-bottom: 8px;
+      color: var(--text-main);
+    }
+
+    .input-hint {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    textarea.tool-textarea {
+      width: 100%;
+      height: 120px;
+      padding: 12px;
+      font-size: 0.95rem;
+      font-family: inherit;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      resize: vertical;
+      line-height: 1.5;
+      background-color: #fff;
+    }
+
+    textarea.tool-textarea:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.15);
+    }
+
+    .btn-submit {
+      display: block;
+      width: 100%;
+      padding: 14px 20px;
+      background-color: var(--primary-color);
+      color: #ffffff;
+      border: none;
+      border-radius: var(--radius-md);
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      text-align: center;
+    }
+
+    .btn-submit:hover {
+      background-color: var(--primary-hover);
+    }
+
+    .btn-submit:active {
+      transform: scale(0.99);
+    }
+
+    /* 도구 결과 테이블 */
+    .result-container {
+      margin-top: 24px;
+      display: none;
+    }
+
+    .table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      background-color: #ffffff;
+      margin-bottom: 12px;
+    }
+
+    table.result-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.92rem;
+      min-width: 480px;
+    }
+
+    table.result-table th,
+    table.result-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    table.result-table th {
+      background-color: #f5f5f4;
+      font-weight: 600;
+      color: #44403c;
+    }
+
+    table.result-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .allergen-tag {
+      display: inline-block;
+      background-color: #ffedd5;
+      color: #c2410c;
+      border: 1px solid #fed7aa;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 4px;
+      margin: 2px;
+    }
+
+    .allergen-empty {
+      color: #a8a29e;
+      font-size: 0.85rem;
+    }
+
+    .fixed-notice {
+      background-color: #fff7ed;
+      border-left: 4px solid var(--primary-color);
+      padding: 12px 16px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #9a3412;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin-bottom: 14px;
+    }
+
+    .standard-ref-box {
+      background-color: #fcfbf9;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 14px 16px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .standard-ref-title {
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 6px;
+      font-size: 0.88rem;
+    }
+
+    .standard-ref-items {
+      line-height: 1.6;
+      margin-bottom: 8px;
+      word-break: keep-all;
+    }
+
+    .standard-ref-note {
+      font-size: 0.82rem;
+      color: var(--primary-hover);
+      border-top: 1px dashed var(--border-color);
+      padding-top: 6px;
+      margin: 0;
+      word-break: keep-all;
+    }
+
+    /* 수작업 대조 결과 섹션 */
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .comparison-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 18px;
+    }
+
+    .comparison-card h4 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+      color: var(--primary-hover);
+    }
+
+    .comparison-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* 규칙 섹션 */
+    .rule-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .rule-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      display: flex;
+      gap: 12px;
+    }
+
+    .rule-num {
+      width: 24px;
+      height: 24px;
+      background-color: var(--primary-color);
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 700;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .rule-content h4 {
+      font-size: 0.98rem;
+      margin-bottom: 4px;
+      color: #0c0a09;
+    }
+
+    .rule-content p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    /* 만든 과정 섹션: 4칸 카드 */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .process-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 18px;
+      position: relative;
+    }
+
+    .process-card.pending {
+      background: #f5f5f4;
+      border-style: dashed;
+    }
+
+    .process-step {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .process-card.pending .process-step {
+      color: #78716c;
+    }
+
+    .process-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .process-card.pending .process-title {
+      color: #78716c;
+    }
+
+    .process-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    /* 연락처 및 푸터 */
+    .contact-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .contact-email {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+
+    footer {
+      padding: 32px 0 48px;
+      text-align: center;
+      font-size: 0.82rem;
+      color: #78716c;
+    }
+
+    /* 모바일 대응 (375px 포함) */
+    @media (max-width: 640px) {
+      h1.hero-title {
+        font-size: 1.45rem;
+      }
+      .metrics-grid {
+        grid-template-columns: 1fr;
+      }
+      .comparison-grid {
+        grid-template-columns: 1fr;
+      }
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+      .tool-card {
+        padding: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 첫 화면 -->
+  <header>
+    <div class="container">
+      <span class="badge">식품영양학 전공 포트폴리오</span>
+      <h1 class="hero-title">현장의 반복 확인을, 실수를 줄이는 도구로 바꿉니다</h1>
+      <p class="hero-desc">
+        영양사 국가시험을 준비하며 급식소 실습 현장에서 겪은 수작업 알레르기 확인의 시간 소요와 착오 위험을 줄이고자 만든 보조 웹 도구입니다.
+      </p>
+
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-value">약 2시간 → 약 30분</div>
+          <div class="metric-label">1주 식단 확인 시간 절감</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">4주분 80개 메뉴</div>
+          <div class="metric-label">실습 식단 수작업 대조 시험</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">19개 항목 기준</div>
+          <div class="metric-label">「식품등의 표시기준」 원문 대조</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- 문제 (2시간의 반복) -->
+    <section id="problem">
+      <h2 class="section-title">문제: 2시간의 반복과 실수의 위험</h2>
+      <p class="section-desc">
+        급식소 실습 4주 동안 매주 주간 식단표를 작성할 때마다 레시피를 한 줄씩 보며 알레르기 유발 식재료를 사람이 수작업으로 표시해야 했습니다.
+      </p>
+      <div class="problem-box">
+        <div class="problem-flow">
+          <div class="flow-item">
+            <span class="flow-tag">현장 업무</span>
+            <div>1주일 식단 확인에 약 2시간 소요 (수많은 레시피의 식재료를 눈으로 대조)</div>
+          </div>
+          <div class="flow-item">
+            <span class="flow-tag">오류 위험</span>
+            <div>동의어 표기 차이나 복합 재료 확인 시 사람의 집중력 저하로 인한 누락 발생 가능성</div>
+          </div>
+          <div class="flow-item">
+            <span class="flow-tag">해결 접근</span>
+            <div>AI 에이전트를 활용해 메뉴별 재료를 넣으면 표시 대상 항목과 대조해 주는 보조 도구 제작</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 도구 체험 -->
+    <section id="tool-demo">
+      <h2 class="section-title">도구 체험: 알레르기 유발물질 대조</h2>
+      <p class="section-desc">
+        메뉴명과 재료를 입력창에 넣고 버튼을 누르면, 「식품등의 표시기준」 및 동의어 사전을 바탕으로 표시 대상 항목을 판별합니다.
+      </p>
+
+      <div class="tool-card">
+        <div class="input-group">
+          <label class="input-label" for="menuInput">식단 및 식재료 입력</label>
+          <div class="input-hint">한 줄에 "메뉴명: 재료, 재료, …" 형식으로 입력하세요. (여러 줄 입력 가능)</div>
+          <textarea id="menuInput" class="tool-textarea" spellcheck="false">잡채: 당면, 돼지고기, 간장, 시금치
+계란말이: 달걀, 당근, 대파, 소금
+해물된장찌개: 된장, 두부, 새우, 바지락, 호박</textarea>
+        </div>
+
+        <button type="button" id="btnCheck" class="btn-submit">알레르기 유발 표시 대상 항목 확인하기</button>
+
+        <div id="resultContainer" class="result-container">
+          <div class="table-wrapper">
+            <table class="result-table">
+              <thead>
+                <tr>
+                  <th style="width: 25%;">메뉴명</th>
+                  <th style="width: 40%;">입력 재료</th>
+                  <th style="width: 35%;">해당 표시 대상 항목</th>
+                </tr>
+              </thead>
+              <tbody id="resultBody"></tbody>
+            </table>
+          </div>
+          <div class="fixed-notice">
+            가공품은 제품 표시를 확인하세요. 이 도구는 보조 수단입니다.
+          </div>
+          <div class="standard-ref-box">
+            <div class="standard-ref-title">알레르기 유발 표시 대상 (19개 항목)</div>
+            <p class="standard-ref-items">알류 · 우유 · 메밀 · 땅콩 · 대두 · 밀 · 고등어 · 게 · 새우 · 돼지고기 · 복숭아 · 토마토 · 아황산류 · 호두 · 닭고기 · 쇠고기 · 오징어 · 조개류 · 잣</p>
+            <p class="standard-ref-note">조개류에 포함된 굴·전복·홍합을 따로 세면 22종으로도 부릅니다 · 출처: 「식품등의 표시기준」</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 수작업과의 대조 결과 -->
+    <section id="comparison">
+      <h2 class="section-title">수작업과의 대조 결과</h2>
+      <p class="section-desc">
+        실습 식단 4주분(총 80개 메뉴)을 수작업 결과와 직접 대조하며 발생한 불일치를 분석하고 개선했습니다.
+      </p>
+
+      <div class="comparison-grid">
+        <div class="comparison-card">
+          <h4>1차 대조 시험 (불일치 6건)</h4>
+          <p>
+            <strong>원인:</strong> 재료 표기가 달라 도구가 감지하지 못함 (예: 계란/달걀 표기 차이, 마요네즈 속 달걀 성분 등)<br>
+            <strong>개선:</strong> 동의어 사전 보완 (달걀, 계란, 메추리알, 마요네즈 등을 알류로 통합 연계)
+          </p>
+        </div>
+        <div class="comparison-card">
+          <h4>2차 대조 시험 (불일치 1건)</h4>
+          <p>
+            <strong>원인:</strong> 가공품 원재료 미기재 (가공식품 자체의 원재료명이 레시피 텍스트에 상세히 적히지 않음)<br>
+            <strong>개선:</strong> "가공품은 제품 표시를 사람이 확인"이라는 실무 검증 규칙 수립 및 도구에 고정 반영
+          </p>
+        </div>
+      </div>
+
+      <div style="margin-top: 16px; padding: 14px; background-color: var(--primary-soft); border-radius: var(--radius-md); font-size: 0.92rem;">
+        <strong>검증 결과:</strong> 1주 식단 확인 소요 시간 약 2시간에서 약 30분으로 단축 (사람의 반복 대조 수고 경감)
+      </div>
+    </section>
+
+    <!-- 영양사로서 내가 정한 규칙 -->
+    <section id="rules">
+      <h2 class="section-title">영양사로서 내가 정한 규칙</h2>
+      <p class="section-desc">
+        디지털 도구를 활용하되, 식품 안전과 위생을 책임지는 전공자로서 타협할 수 없는 원칙을 세웠습니다.
+      </p>
+
+      <ul class="rule-list">
+        <li class="rule-item">
+          <div class="rule-num">1</div>
+          <div class="rule-content">
+            <h4>도구는 보조 수단이며, 최종 확인은 영양사가 수행한다</h4>
+            <p>소프트웨어의 결과를 맹신하지 않고, 전문 지식을 가진 영양사가 최종 식단표 발행 전 검토합니다.</p>
+          </div>
+        </li>
+        <li class="rule-item">
+          <div class="rule-num">2</div>
+          <div class="rule-content">
+            <h4>가공품은 제품 표시를 사람이 직접 확인한다</h4>
+            <p>텍스트 레시피에 다 담기지 않는 복합 조미식품, 가공 완제품의 세부 성분과 혼입 가능성은 포장재 표시를 직접 육안 점검합니다.</p>
+          </div>
+        </li>
+        <li class="rule-item">
+          <div class="rule-num">3</div>
+          <div class="rule-content">
+            <h4>검증 범위의 한계를 명확히 인지한다</h4>
+            <p>본 도구는 실습 식단 4주분으로 시험된 것이며, 단정하지 않고 실제 현장의 다양한 변수에 맞춰 지속적으로 기준을 대조·보완합니다.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 이 사이트를 만든 과정 -->
+    <section id="process">
+      <h2 class="section-title">이 사이트를 만든 과정</h2>
+      <p class="section-desc">
+        문제 인식부터 법적 고시 기준 대조, 도구 제작 및 실증에 이르는 단계별 기록입니다.
+      </p>
+
+      <div class="process-grid">
+        <div class="process-card">
+          <div class="process-step">Step 1</div>
+          <div class="process-title">고시 원문 대조 및 기준 확립</div>
+          <div class="process-desc">
+            AI 초안에서 '잣'이 누락되고 "21종"으로 잘못 생성된 것을 발견하여, 식약처 「식품등의 표시기준」 원문과 직접 대조해 19개 항목 기준 체계를 확립했습니다.
+          </div>
+        </div>
+
+        <div class="process-card">
+          <div class="process-step">Step 2</div>
+          <div class="process-title">도구 프로토타입 제작 및 동의어 연계</div>
+          <div class="process-desc">
+            메뉴별 재료 입력 시 표시 대상 항목을 대조하는 웹 도구를 구현하고, 현장에서 혼용되는 동의어(계란/달걀, 마요네즈, 햄, 간장 등) 매칭 로직을 적용했습니다.
+          </div>
+        </div>
+
+        <div class="process-card">
+          <div class="process-step">Step 3</div>
+          <div class="process-title">4주 실습 식단 80개 메뉴 교차 검증</div>
+          <div class="process-desc">
+            실습 식단 80개 메뉴를 수작업 결과와 대조하여 1차 불일치 6건(계란/달걀 등 표기 차이)은 동의어 추가로 잡고, 2차 불일치 1건(가공품 원재료 미기재)은 현장 라벨 확인 규칙을 세워 1주 확인 시간을 약 2시간에서 약 30분으로 줄였습니다.
+          </div>
+        </div>
+
+        <div class="process-card">
+          <div class="process-step">Step 4</div>
+          <div class="process-title">고시 출처 명시 및 현장 안전 원칙 정립</div>
+          <div class="process-desc">
+            표시 대상 19개 항목과 조개류 3종 분리(22종) 고시 출처를 명확히 밝히고, 375px 모바일 입력을 검증했습니다. 4주분 데이터 시험의 한계를 명시하며 최종 확인은 사람이 수행한다는 안전 원칙을 확정했습니다.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 연락처 -->
+    <section id="contact" style="border-bottom: none;">
+      <h2 class="section-title">연락처</h2>
+      <p class="section-desc">
+        식품영양 현장의 효율 개선과 안전 관리에 대해 더 많은 이야기를 나누고 싶습니다.
+      </p>
+      <div class="contact-card">
+        <p style="font-size: 0.95rem; margin-bottom: 6px;">식품영양학과 4학년 정민재 (영양사 국가시험 준비 중)</p>
+        <a href="mailto:minjae.jung@example.com" class="contact-email">minjae.jung@example.com</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>이 사이트는 특강용 가상 인물의 예시입니다</p>
+    </div>
+  </footer>
+
+  <script>
+    // 「식품등의 표시기준」 표시 대상 19개 항목과 동의어 목록
+    const ALLERGEN_ITEMS = [
+      { name: "알류", synonyms: ["달걀", "계란", "메추리알", "마요네즈", "알류"] },
+      { name: "우유", synonyms: ["우유", "치즈", "버터", "생크림", "요거트", "분유"] },
+      { name: "메밀", synonyms: ["메밀"] },
+      { name: "땅콩", synonyms: ["땅콩"] },
+      { name: "대두", synonyms: ["대두", "콩", "두부", "된장", "간장"] },
+      { name: "밀", synonyms: ["밀", "밀가루", "빵가루", "국수", "부침가루", "간장"] },
+      { name: "고등어", synonyms: ["고등어"] },
+      { name: "게", synonyms: ["게"] },
+      { name: "새우", synonyms: ["새우", "새우젓"] },
+      { name: "돼지고기", synonyms: ["돼지고기", "햄", "베이컨"] },
+      { name: "복숭아", synonyms: ["복숭아"] },
+      { name: "토마토", synonyms: ["토마토", "케첩"] },
+      { name: "아황산류", synonyms: ["아황산류", "아황산염", "이산화황"] }, // 재료명으로 판단 불가 — 제품 표시 확인
+      { name: "호두", synonyms: ["호두"] },
+      { name: "닭고기", synonyms: ["닭고기"] },
+      { name: "쇠고기", synonyms: ["쇠고기"] },
+      { name: "오징어", synonyms: ["오징어"] },
+      { name: "조개류", synonyms: ["조개", "굴", "전복", "홍합", "바지락", "조개류"] },
+      { name: "잣", synonyms: ["잣"] }
+    ];
+
+    function checkAllergensForIngredients(ingredientsText) {
+      const foundSet = new Set();
+      // 재료 분리: 쉼표나 공백 기준
+      const tokens = ingredientsText.split(/[,/·\n]/).map(t => t.trim()).filter(Boolean);
+
+      tokens.forEach(token => {
+        ALLERGEN_ITEMS.forEach(item => {
+          const isMatched = item.synonyms.some(syn => token.includes(syn));
+          if (isMatched) {
+            foundSet.add(item.name);
+          }
+        });
+      });
+
+      return Array.from(foundSet);
+    }
+
+    function runCheck() {
+      const inputEl = document.getElementById("menuInput");
+      const resultContainer = document.getElementById("resultContainer");
+      const resultBody = document.getElementById("resultBody");
+
+      const lines = inputEl.value.split("\n").map(l => l.trim()).filter(Boolean);
+      resultBody.innerHTML = "";
+
+      if (lines.length === 0) {
+        resultContainer.style.display = "none";
+        return;
+      }
+
+      lines.forEach(line => {
+        let menuName = "";
+        let ingredientsText = "";
+
+        const colonIndex = line.indexOf(":");
+        if (colonIndex !== -1) {
+          menuName = line.substring(0, colonIndex).trim();
+          ingredientsText = line.substring(colonIndex + 1).trim();
+        } else {
+          menuName = "메뉴";
+          ingredientsText = line;
+        }
+
+        const matchedAllergens = checkAllergensForIngredients(ingredientsText);
+
+        const tr = document.createElement("tr");
+
+        const tdMenu = document.createElement("td");
+        tdMenu.textContent = menuName;
+        tdMenu.style.fontWeight = "600";
+
+        const tdIngredients = document.createElement("td");
+        tdIngredients.textContent = ingredientsText;
+
+        const tdAllergens = document.createElement("td");
+        if (matchedAllergens.length > 0) {
+          matchedAllergens.forEach(name => {
+            const span = document.createElement("span");
+            span.className = "allergen-tag";
+            span.textContent = name;
+            tdAllergens.appendChild(span);
+          });
+        } else {
+          const span = document.createElement("span");
+          span.className = "allergen-empty";
+          span.textContent = "해당 없음";
+          tdAllergens.appendChild(span);
+        }
+
+        tr.appendChild(tdMenu);
+        tr.appendChild(tdIngredients);
+        tr.appendChild(tdAllergens);
+
+        resultBody.appendChild(tr);
+      });
+
+      resultContainer.style.display = "block";
+    }
+
+    document.getElementById("btnCheck").addEventListener("click", runCheck);
+  </script>
+</body>
+</html>

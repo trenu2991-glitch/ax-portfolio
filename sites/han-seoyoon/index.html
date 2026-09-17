@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>한서윤 | 영양사 포트폴리오</title>
+<style>
+  :root {
+    --primary: #1d4ed8;
+    --primary-dark: #1e3a8a;
+    --primary-light: #eff6ff;
+    --secondary-blue: #3b82f6;
+    --bar-before: #94a3b8;
+    --bar-after: #2563eb;
+    --text-main: #0f172a;
+    --text-muted: #475569;
+    --border: #e2e8f0;
+    --bg-page: #f8fafc;
+    --bg-card: #ffffff;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Noto Sans KR", sans-serif;
+    background-color: var(--bg-page);
+    color: var(--text-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 24px 16px;
+  }
+
+  /* Header */
+  header {
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .author-tag {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+  }
+
+  .status-badge {
+    font-size: 0.8rem;
+    background-color: var(--primary-light);
+    color: var(--primary);
+    padding: 4px 10px;
+    border-radius: 9999px;
+    font-weight: 600;
+    border: 1px solid #bfdbfe;
+  }
+
+  /* Hero Section */
+  .hero {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 32px 24px;
+    margin-bottom: 32px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+    line-height: 1.4;
+    color: var(--primary-dark);
+    margin-bottom: 24px;
+    word-break: keep-all;
+  }
+
+  .stat-box {
+    background-color: var(--primary-light);
+    border: 1px solid #bfdbfe;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--primary);
+    letter-spacing: -0.5px;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .stat-desc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    font-weight: 600;
+  }
+
+  /* Section Common */
+  section {
+    margin-bottom: 36px;
+  }
+
+  .section-title {
+    font-size: 1.3rem;
+    color: var(--primary-dark);
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #dbeafe;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  }
+
+  /* Project Steps */
+  .step-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .step-item {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    border-left: 4px solid var(--primary);
+  }
+
+  .step-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+
+  .step-heading {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 6px;
+  }
+
+  .step-content {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+  }
+
+  .step-content ul {
+    margin: 6px 0 0 18px;
+  }
+
+  .step-content li {
+    margin-bottom: 4px;
+  }
+
+  /* Chart Styles (Pure CSS) */
+  .chart-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .chart-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 12px;
+  }
+
+  .chart-legend {
+    display: flex;
+    gap: 16px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+  }
+
+  .legend-before {
+    background-color: var(--bar-before);
+  }
+
+  .legend-after {
+    background-color: var(--bar-after);
+  }
+
+  .chart-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .chart-row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .row-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-main);
+  }
+
+  .row-adjustment {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: normal;
+  }
+
+  .bar-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background-color: #f1f5f9;
+    padding: 6px 8px;
+    border-radius: 6px;
+  }
+
+  .bar-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 20px;
+  }
+
+  .bar-tag {
+    font-size: 0.75rem;
+    width: 44px;
+    color: var(--text-muted);
+    flex-shrink: 0;
+  }
+
+  .bar-track {
+    flex-grow: 1;
+    height: 14px;
+    background-color: #e2e8f0;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .bar-fill {
+    height: 100%;
+    border-radius: 3px;
+  }
+
+  .bar-fill.before {
+    background-color: var(--bar-before);
+  }
+
+  .bar-fill.after {
+    background-color: var(--bar-after);
+  }
+
+  .bar-value {
+    font-size: 0.78rem;
+    font-weight: 700;
+    width: 42px;
+    text-align: right;
+    color: var(--text-main);
+    flex-shrink: 0;
+  }
+
+  /* Table Styles */
+  .table-wrapper {
+    overflow-x: auto;
+    margin-top: 16px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  th, td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  th {
+    background-color: #f8fafc;
+    color: var(--text-muted);
+    font-weight: 600;
+  }
+
+  th:first-child, td:first-child {
+    text-align: left;
+    font-weight: 600;
+    color: var(--text-main);
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
+
+  .rate-cell {
+    font-weight: 700;
+    color: var(--primary);
+  }
+
+  /* Cost Section */
+  .cost-box {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  .cost-box p {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+  }
+
+  .cost-box p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Process Section - 4 Boxes */
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .process-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+  }
+
+  .process-card h3 {
+    font-size: 0.95rem;
+    color: var(--primary-dark);
+    margin-bottom: 8px;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 6px;
+  }
+
+  .process-card ul {
+    margin-left: 16px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  .process-card li {
+    margin-bottom: 4px;
+  }
+
+  .process-card .pending-text {
+    font-size: 0.88rem;
+    color: #94a3b8;
+    font-style: italic;
+    padding: 8px 0;
+  }
+
+  /* Contact Section */
+  .contact-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .contact-email {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 4px;
+  }
+
+  .contact-email:hover {
+    text-decoration: underline;
+  }
+
+  .contact-info {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    margin-top: 8px;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 24px 0 12px;
+    border-top: 1px solid var(--border);
+    font-size: 0.82rem;
+    color: #94a3b8;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 640px) {
+    .container {
+      padding: 16px 12px;
+    }
+
+    .hero {
+      padding: 24px 16px;
+    }
+
+    .hero h1 {
+      font-size: 1.3rem;
+    }
+
+    .stat-number {
+      font-size: 1.8rem;
+    }
+
+    .process-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .row-label {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Header -->
+  <header>
+    <div class="author-tag">한서윤 포트폴리오</div>
+    <div class="status-badge">영양사 국가시험 준비 중</div>
+  </header>
+
+  <!-- 1. 첫 화면 (Hero) -->
+  <section class="hero">
+    <h1>남는 음식을 숫자로 읽고,<br>줄이는 방법을 설계합니다</h1>
+    <div class="stat-box">
+      <span class="stat-number">31% → 22%</span>
+      <span class="stat-desc">조정한 5개 메뉴의 평균 잔반률</span>
+    </div>
+  </section>
+
+  <!-- 2. 잔반 줄이기 프로젝트 (문제·분석·제안·결과) -->
+  <section>
+    <h2 class="section-title">잔반 줄이기 프로젝트</h2>
+    
+    <div class="step-group">
+      <!-- 문제 -->
+      <div class="step-item">
+        <div class="step-label">문제</div>
+        <div class="step-heading">교내 학생식당 60종 메뉴 잔반 발생 포착</div>
+        <div class="step-content">
+          교내 학생식당 6주 실습(가상, 평일 중식 약 400식) 중 1~4주차 동안 60종 메뉴의 배식량과 잔반량을 매일 기록했습니다. 그 결과 특정 메뉴군에서 지속적으로 많은 양의 잔반이 남겨지는 문제를 발견했습니다.
+        </div>
+      </div>
+
+      <!-- 분석 -->
+      <div class="step-item">
+        <div class="step-label">분석</div>
+        <div class="step-heading">배식량 기준 잔반률 산출 및 5개 기피 메뉴 선별</div>
+        <div class="step-content">
+          엑셀(피벗 테이블, 함수)과 구글 시트를 활용하여 조리량이 아닌 실제 '배식량'을 분모로 한 잔반률(잔반량/배식량)을 정량 산출했습니다. 분석 결과, 잔반률이 24%~38%로 특히 높았던 5개 메뉴(가지나물, 코다리조림, 미역줄기볶음, 순두부찌개, 우엉조림)를 집중 개선 대상으로 도출했습니다.
+        </div>
+      </div>
+
+      <!-- 제안 -->
+      <div class="step-item">
+        <div class="step-label">제안</div>
+        <div class="step-heading">조리법·배식 방식 재설계 및 지도 영양사 승인</div>
+        <div class="step-content">
+          기피 원인을 파악해 조리법과 배식 방식을 재설계하고, 1식 단가 안에서 대체 식재료 비교 시트를 작성하여 지도 영양사의 승인을 획득했습니다.
+          <ul>
+            <li><strong>가지나물</strong> → <strong>가지구이</strong></li>
+            <li><strong>코다리조림</strong> → <strong>순살</strong></li>
+            <li><strong>미역줄기볶음</strong> → <strong>1회 제공량 줄이고 추가 배식 허용</strong></li>
+            <li><strong>순두부찌개</strong> → <strong>맵기 낮춤</strong></li>
+            <li><strong>우엉조림</strong> → <strong>채 굵기 조정</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 결과 -->
+      <div class="step-item">
+        <div class="step-label">결과</div>
+        <div class="step-heading">5~6주차 조정안 적용 후 평균 잔반률 9%p 감축</div>
+        <div class="step-content">
+          지도 영양사 승인 하에 5~6주차 식단에 조정안을 적용한 결과, 5개 메뉴의 평균 잔반률이 31%에서 22%로 9%p 감소했습니다.
+        </div>
+      </div>
+    </div>
+
+    <!-- 결과 막대그래프 -->
+    <div class="chart-card">
+      <div class="chart-title">메뉴별 조정 전·후 잔반률 비교</div>
+      <div class="chart-legend">
+        <div class="legend-item">
+          <div class="legend-color legend-before"></div>
+          <span>조정 전</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color legend-after"></div>
+          <span>조정 후</span>
+        </div>
+      </div>
+
+      <div class="chart-list">
+        <!-- 가지나물: 38% -> 24% -->
+        <div class="chart-row">
+          <div class="row-label">
+            <span>가지나물</span>
+            <span class="row-adjustment">가지나물 → 가지구이</span>
+          </div>
+          <div class="bar-container">
+            <div class="bar-wrapper">
+              <span class="bar-tag">조정 전</span>
+              <div class="bar-track">
+                <div class="bar-fill before" style="width: 38%;"></div>
+              </div>
+              <span class="bar-value">38%</span>
+            </div>
+            <div class="bar-wrapper">
+              <span class="bar-tag">조정 후</span>
+              <div class="bar-track">
+                <div class="bar-fill after" style="width: 24%;"></div>
+              </div>
+              <span class="bar-value">24%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 코다리조림: 34% -> 26% -->
+        <div class="chart-row">
+          <div class="row-label">
+            <span>코다리조림</span>
+            <span class="row-adjustment">코다리조림 → 순살</span>
+          </div>
+          <div class="bar-container">
+            <div class="bar-wrapper">
+              <span class="bar-tag">조정 전</span>
+              <div class="bar-track">
+                <div class="bar-fill before" style="width: 34%;"></div>
+              </div>
+              <span class="bar-value">34%</span>
+            </div>
+            <div class="bar-wrapper">
+              <span class="bar-tag">조정 후</span>
+              <div class="bar-track">
+                <div class="bar-fill after" style="width: 26%;"></div>
+              </div>
+              <span class="bar-value">26%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 미역줄기: 31% -> 22% -->
+        <div class="chart-row">
+          <div class="row-label">
+            <span>미역줄기</span>
+            <span class="row-adjustment">1회 제공량 줄이고 추가 배식 허용</span>
+          </div>
+          <div class="bar-container">
+            <div class="bar-wrapper">
+              <span class="bar-tag">조정 전</span>
+              <div class="bar-track">
+                <div class="bar-fill before" style="width: 31%;"></div>
+              </div>
+              <span class="bar-value">31%</span>
+            </div>
+            <div class="bar-wrapper">
+              <span class="bar-tag">조정 후</span>
+              <div class="bar-track">
+                <div class="bar-fill after" style="width: 22%;"></div>
+              </div>
+              <span class="bar-value">22%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 순두부찌개: 28% -> 21% -->
+        <div class="chart-row">
+          <div class="row-label">
+            <span>순두부찌개</span>
+            <span class="row-adjustment">순두부찌개 → 맵기 낮춤</span>
+          </div>
+          <div class="bar-container">
+            <div class="bar-wrapper">
+              <span class="bar-tag">조정 전</span>
+              <div class="bar-track">
+                <div class="bar-fill before" style="width: 28%;"></div>
+              </div>
+              <span class="bar-value">28%</span>
+            </div>
+            <div class="bar-wrapper">
+              <span class="bar-tag">조정 후</span>
+              <div class="bar-track">
+                <div class="bar-fill after" style="width: 21%;"></div>
+              </div>
+              <span class="bar-value">21%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 우엉조림: 24% -> 17% -->
+        <div class="chart-row">
+          <div class="row-label">
+            <span>우엉조림</span>
+            <span class="row-adjustment">우엉조림 → 채 굵기 조정</span>
+          </div>
+          <div class="bar-container">
+            <div class="bar-wrapper">
+              <span class="bar-tag">조정 전</span>
+              <div class="bar-track">
+                <div class="bar-fill before" style="width: 24%;"></div>
+              </div>
+              <span class="bar-value">24%</span>
+            </div>
+            <div class="bar-wrapper">
+              <span class="bar-tag">조정 후</span>
+              <div class="bar-track">
+                <div class="bar-fill after" style="width: 17%;"></div>
+              </div>
+              <span class="bar-value">17%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 원자료 표 -->
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>메뉴</th>
+              <th>구분</th>
+              <th>조리량(kg)</th>
+              <th>배식량(kg)</th>
+              <th>잔반량(kg)</th>
+              <th>잔반률</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="2">가지나물</td>
+              <td>조정 전</td>
+              <td>30.0</td>
+              <td>25.0</td>
+              <td>9.5</td>
+              <td class="rate-cell">38%</td>
+            </tr>
+            <tr>
+              <td>조정 후</td>
+              <td>14.0</td>
+              <td>12.5</td>
+              <td>3.0</td>
+              <td class="rate-cell">24%</td>
+            </tr>
+            <tr>
+              <td rowspan="2">코다리조림</td>
+              <td>조정 전</td>
+              <td>48.0</td>
+              <td>40.0</td>
+              <td>13.6</td>
+              <td class="rate-cell">34%</td>
+            </tr>
+            <tr>
+              <td>조정 후</td>
+              <td>22.0</td>
+              <td>20.0</td>
+              <td>5.2</td>
+              <td class="rate-cell">26%</td>
+            </tr>
+            <tr>
+              <td rowspan="2">미역줄기</td>
+              <td>조정 전</td>
+              <td>24.0</td>
+              <td>20.0</td>
+              <td>6.2</td>
+              <td class="rate-cell">31%</td>
+            </tr>
+            <tr>
+              <td>조정 후</td>
+              <td>10.0</td>
+              <td>9.0</td>
+              <td>2.0</td>
+              <td class="rate-cell">22%</td>
+            </tr>
+            <tr>
+              <td rowspan="2">순두부찌개</td>
+              <td>조정 전</td>
+              <td>96.0</td>
+              <td>80.0</td>
+              <td>22.4</td>
+              <td class="rate-cell">28%</td>
+            </tr>
+            <tr>
+              <td>조정 후</td>
+              <td>44.0</td>
+              <td>40.0</td>
+              <td>8.4</td>
+              <td class="rate-cell">21%</td>
+            </tr>
+            <tr>
+              <td rowspan="2">우엉조림</td>
+              <td>조정 전</td>
+              <td>18.0</td>
+              <td>15.0</td>
+              <td>3.6</td>
+              <td class="rate-cell">24%</td>
+            </tr>
+            <tr>
+              <td>조정 후</td>
+              <td>8.5</td>
+              <td>7.5</td>
+              <td>1.3</td>
+              <td class="rate-cell">17%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. 원가 비교 작업 -->
+  <section>
+    <h2 class="section-title">원가 비교 작업</h2>
+    <div class="cost-box">
+      <p>단체급식 운영에서는 잔반을 줄이기 위한 조리법·식재료 변경 시에도 정해진 1식 단가를 준수하는 것이 필수적입니다.</p>
+      <p>조정안 수립 시 1식 단가 안에서 대체 식재료 비교 시트를 작성하여 단가 상승 요인을 사전 차단하고, 지도 영양사와의 사전 협의 및 승인을 거쳐 현장 조리에 적용했습니다.</p>
+    </div>
+  </section>
+
+  <!-- 4. 이 사이트를 만든 과정 -->
+  <section>
+    <h2 class="section-title">이 사이트를 만든 과정</h2>
+    <div class="process-grid">
+      <!-- 칸 1: AI에게 맡긴 것 -->
+      <div class="process-card">
+        <h3>AI에게 맡긴 것</h3>
+        <ul>
+          <li>모바일(375px) 대응 반응형 HTML/CSS 레이아웃 코드 구현</li>
+          <li>외부 라이브러리 없는 CSS 기반 전후 비교 막대그래프 시각화 마크업</li>
+        </ul>
+      </div>
+
+      <!-- 칸 2: 내가 정한 것 -->
+      <div class="process-card">
+        <h3>내가 정한 것</h3>
+        <ul>
+          <li>직무 정체성을 드러내는 헤드라인과 30초 핵심 지표 선정</li>
+          <li>원자료 표 데이터(조리량·배식량·잔반량) 제공 및 배식량 기준 잔반률 공식 정의</li>
+          <li>5개 메뉴별 현장 맞춤형 조리·배식 조정안 수립</li>
+          <li>1식 단가 내 대체 식재료 비교 및 승인 프로세스 구성</li>
+          <li>파란색 계열 디자인 톤앤매너 및 섹션 순서 결정</li>
+        </ul>
+      </div>
+
+      <!-- 칸 3: 내가 찾아 고친 것 -->
+      <div class="process-card">
+        <h3>내가 찾아 고친 것</h3>
+        <ul>
+          <li><strong>잔반률 분모 기준 수정</strong>: 처음 생성본에서 AI가 잔반률 분모를 조리량으로 잡아 그래프가 낮게 나오던 오류를 발견하여, 배식량 기준(잔반량 ÷ 배식량 × 100)으로 재계산</li>
+          <li><strong>지표 표기 정수 통일</strong>: 3단계 검증을 통해 미역줄기(22.2%→22%), 우엉조림(17.3%→17%) 등 잔반률 수치를 소수점 없는 정수로 반올림 통일</li>
+          <li><strong>문구 정비</strong>: 조정안 설명에서 임의로 덧붙여졌던 수식어구를 걷어내고 원자료에 부합하게 정리</li>
+        </ul>
+      </div>
+
+      <!-- 칸 4: 남은 한계 -->
+      <div class="process-card">
+        <h3>남은 한계</h3>
+        <ul>
+          <li><strong>데이터 표본 한계</strong>: 기록 4주·적용 2주, 식당 한 곳(교내 학생식당)의 결과로, 다양한 식수와 단체급식 환경에 일반화하기에는 추가 검증이 필요함</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. 연락처 -->
+  <section>
+    <h2 class="section-title">연락처</h2>
+    <div class="contact-card">
+      <div>한서윤 | 예비 영양사</div>
+      <a href="mailto:seoyoon.han@example.com" class="contact-email">seoyoon.han@example.com</a>
+      <div class="contact-info">식품영양학과 4학년 · 영양사 국가시험 준비 중 · 엑셀(피벗, 함수) 및 구글 시트 활용</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    이 사이트는 특강용 가상 인물의 예시입니다
+  </footer>
+
+</div>
+
+</body>
+</html>
