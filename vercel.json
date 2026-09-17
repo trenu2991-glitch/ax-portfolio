@@ -1,1 +1,7 @@
-{"outputDirectory": "sites", "trailingSlash": true}
+{
+  "framework": null,
+  "installCommand": "echo skip-install",
+  "buildCommand": "echo static-sites",
+  "outputDirectory": "sites",
+  "trailingSlash": true
+}
