@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="trayBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0F172A" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Background Mat -->
+  <rect width="600" height="400" fill="#F0FDF4" rx="16"/>
+  <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+    <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#DCFCE7" stroke-width="1.5"/>
+  </pattern>
+  <rect width="600" height="400" fill="url(#grid)" rx="16"/>
+
+  <!-- Hospital Clinical Tray Base -->
+  <rect x="50" y="40" width="500" height="320" rx="24" fill="url(#trayBg)" stroke="#CBD5E1" stroke-width="3" filter="url(#cardShadow)"/>
+  <rect x="65" y="55" width="470" height="290" rx="18" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+
+  <!-- Tray Header Tag -->
+  <rect x="80" y="70" width="160" height="30" rx="15" fill="#0D9488"/>
+  <text x="95" y="90" fill="#FFFFFF" font-family="'Pretendard', sans-serif" font-size="13" font-weight="700">임상치료식 · 저염/저칼륨</text>
+
+  <!-- 1. Low Potassium Rice Bowl -->
+  <g transform="translate(90, 120)">
+    <ellipse cx="65" cy="115" rx="55" ry="15" fill="#E2E8F0"/>
+    <circle cx="65" cy="60" r="55" fill="#F8FAFC" stroke="#94A3B8" stroke-width="2"/>
+    <circle cx="65" cy="60" r="48" fill="#FFFFFF"/>
+    <!-- Steamed White Rice (Special Soak Technique) -->
+    <ellipse cx="65" cy="58" rx="42" ry="38" fill="#F1F5F9"/>
+    <circle cx="50" cy="50" r="10" fill="#FFFFFF"/>
+    <circle cx="75" cy="55" r="12" fill="#FFFFFF"/>
+    <circle cx="62" cy="70" r="11" fill="#FFFFFF"/>
+    <!-- Label -->
+    <text x="65" y="145" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="12" font-weight="700" fill="#334155">수침 백미밥 (저인·저칼륨)</text>
+    <text x="65" y="160" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="10" fill="#64748B">310 kcal / Na 5mg</text>
+  </g>
+
+  <!-- 2. Clear Beef Radish Soup (Leached Vegetables) -->
+  <g transform="translate(235, 120)">
+    <ellipse cx="65" cy="115" rx="55" ry="15" fill="#E2E8F0"/>
+    <circle cx="65" cy="60" r="55" fill="#F8FAFC" stroke="#94A3B8" stroke-width="2"/>
+    <circle cx="65" cy="60" r="48" fill="#FEF3C7" stroke="#FDE68A" stroke-width="2"/>
+    <!-- Soup broth clear & radish cubes -->
+    <rect x="40" y="45" width="14" height="14" rx="2" fill="#F8FAFC" opacity="0.9"/>
+    <rect x="70" y="55" width="12" height="12" rx="2" fill="#F8FAFC" opacity="0.9"/>
+    <rect x="55" y="70" width="15" height="15" rx="2" fill="#F8FAFC" opacity="0.9"/>
+    <!-- Lean Beef Pieces -->
+    <ellipse cx="68" cy="45" rx="10" ry="7" fill="#B45309"/>
+    <!-- Scallion touch -->
+    <circle cx="85" cy="70" r="4" fill="#10B981"/>
+    <!-- Label -->
+    <text x="65" y="145" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="12" font-weight="700" fill="#334155">데친 무 맑은 탕</text>
+    <text x="65" y="160" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="10" fill="#64748B">염도 0.4% 제한 조리</text>
+  </g>
+
+  <!-- 3. Main Dish: Steamed Chicken Breast with Pumpkin Puree -->
+  <g transform="translate(380, 75)">
+    <rect x="10" y="20" width="130" height="90" rx="16" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+    <!-- Chicken slices -->
+    <ellipse cx="65" cy="60" rx="45" ry="25" fill="#FDE047" opacity="0.4"/>
+    <ellipse cx="50" cy="55" rx="22" ry="14" fill="#FEF08A" stroke="#EAB308" stroke-width="1.5"/>
+    <ellipse cx="80" cy="65" rx="22" ry="14" fill="#FEF08A" stroke="#EAB308" stroke-width="1.5"/>
+    <circle cx="50" cy="55" r="4" fill="#CA8A04"/>
+    <circle cx="80" cy="65" r="4" fill="#CA8A04"/>
+    <!-- Label -->
+    <text x="75" y="125" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="12" font-weight="700" fill="#334155">단호박 찜닭가슴살</text>
+    <text x="75" y="140" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="10" fill="#64748B">고단백질 24g / 칼륨절감</text>
+  </g>
+
+  <!-- 4. Side Dishes: Bok Choy & Low-K Pickles -->
+  <g transform="translate(380, 225)">
+    <!-- Small dish 1 -->
+    <rect x="10" y="10" width="60" height="60" rx="12" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+    <path d="M 28 35 C 32 25, 45 25, 48 35 C 52 45, 30 55, 28 35 Z" fill="#22C55E"/>
+    <path d="M 35 40 C 40 32, 50 38, 45 48 Z" fill="#16A34A"/>
+    <!-- Small dish 2 -->
+    <rect x="80" y="10" width="60" height="60" rx="12" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+    <circle cx="102" cy="35" r="8" fill="#86EFAC"/>
+    <circle cx="118" cy="42" r="7" fill="#4ADE80"/>
+    <circle cx="105" cy="48" r="6" fill="#86EFAC"/>
+    <!-- Labels -->
+    <text x="40" y="85" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="11" font-weight="700" fill="#334155">청경채 데침</text>
+    <text x="110" y="85" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="11" font-weight="700" fill="#334155">저염 오이지</text>
+  </g>
+
+  <!-- Badge / Certification -->
+  <g transform="translate(75, 290)">
+    <rect width="270" height="34" rx="8" fill="#ECFDF5" stroke="#10B981" stroke-width="1.5"/>
+    <text x="15" y="22" font-family="'Pretendard', sans-serif" font-size="12" font-weight="700" fill="#065F46">✦ 2025 전국 영양식단 경진대회 최우수상 출품작</text>
+  </g>
+</svg>

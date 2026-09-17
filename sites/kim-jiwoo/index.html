@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>김지우 | 식품영양학과 4학년 예비 영양사 포트폴리오</title>
+  <meta name="description" content="데이터 기반 임상영양 설계와 따뜻한 식문화를 만드는 예비 영양사 김지우의 포트폴리오 웹사이트입니다.">
+  <meta name="author" content="김지우 (Kim Ji-woo)">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="김지우 | 식품영양학과 4학년 영양사 포트폴리오">
+  <meta property="og:description" content="2025 전국 대학생 영양식단 경진대회 최우수상, 상급종합병원 영양실습 우수 수료. 근거 중심 영양사 김지우.">
+  <meta property="og:image" content="media/dish-ckd.svg">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="media/favicon.svg">
+
+  <!-- Google Web Fonts (Pretendard & Inter) -->
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Navigation Bar
+       ========================================================================== -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="logo">
+        <div class="logo-badge">
+          <img src="media/favicon.svg" alt="영양사 엠블럼">
+        </div>
+        <span>김지우 <span style="font-size:0.85rem; font-weight:600; color:var(--primary);">예비 영양사</span></span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="#hero" class="nav-link active">홈</a></li>
+        <li><a href="#about" class="nav-link">영양 철학</a></li>
+        <li><a href="#projects" class="nav-link">식단 프로젝트</a></li>
+        <li><a href="#simulator" class="nav-link">식판 시뮬레이터</a></li>
+        <li><a href="#calculator" class="nav-link">영양 계산기</a></li>
+        <li><a href="#competency" class="nav-link">자격·역량</a></li>
+        <li><a href="#contact" class="nav-link">상담·문의</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="btn-print-nav btn-print-trigger" title="이력서 및 포트폴리오 인쇄/PDF 저장">
+          <span>🖨️</span> 인쇄 / PDF
+        </button>
+        <a href="#contact" class="btn-contact-nav">채용 문의</a>
+        <button class="menu-toggle" aria-label="메뉴 열기">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+       Hero Section
+       ========================================================================== -->
+  <section class="hero-section" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-text-wrap">
+          <div class="hero-badge-wrap">
+            <span class="dot"></span>
+            <span>2026 식품영양학과 졸업예정 · 예비 영양사</span>
+          </div>
+          <h1 class="hero-title">
+            정밀한 <span class="highlight">영양 데이터</span>에<br>
+            따뜻한 <span class="highlight">식탁의 온기</span>를 더합니다
+          </h1>
+          <p class="hero-desc">
+            안녕하세요! 식품영양학과 4학년 <strong>김지우</strong>입니다.<br>
+            만성질환 환우를 위한 맞춤형 임상 치료식 설계부터, 500인 규모 단체급식 HACCP 위생 관리, 
+            그리고 2030 직장인을 위한 저속노화(Low-GI) 식단 연구까지—과학적 데이터와 환자 중심의 공감으로 
+            건강한 내일을 식단으로 처방하는 영양사를 지향합니다.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn-primary">
+              <span>대표 프로젝트 보기</span>
+              <span>&rarr;</span>
+            </a>
+            <a href="#simulator" class="btn-secondary">
+              <span>🍱 식판 시뮬레이터 체험</span>
+            </a>
+            <a href="#calculator" class="btn-secondary">
+              <span>🧮 1:1 영양 계산기</span>
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">4.2<span style="font-size:1rem; font-weight:600; color:var(--text-muted);">/4.5</span></span>
+              <span class="stat-label">학부 전공 누적 평점</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">최우수상</span>
+              <span class="stat-label">2025 전국 식단 경진대회</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">240<span style="font-size:1rem; font-weight:600; color:var(--text-muted);">시간</span></span>
+              <span class="stat-label">상급종합병원 영양실습</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">120<span style="font-size:1rem; font-weight:600; color:var(--text-muted);">종+</span></span>
+              <span class="stat-label">맞춤 치료식 레시피 개발</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="profile-card">
+            <img src="media/profile.svg" alt="영양사 김지우 프로필 일러스트">
+          </div>
+          <div class="floating-pill top-right">
+            <span>🥗</span>
+            <span>임상식단 정밀 데이터화</span>
+          </div>
+          <div class="floating-pill bottom-left">
+            <span>🛡️</span>
+            <span>HACCP 100% 위생 안전</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       About & Core Philosophy Section
+       ========================================================================== -->
+  <section class="section section-bg-subtle" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Philosophy & Value</span>
+        <h2 class="section-title">영양사 김지우가 지키는 3대 원칙</h2>
+        <p class="section-subtitle">단순히 칼로리만을 맞추는 것이 아닌, 식사하는 분의 삶과 마음을 치유하는 영양학을 실천합니다.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="philosophy-card">
+          <div class="philo-icon">📊</div>
+          <h3 class="philo-title">근거 중심 임상 영양 (Evidence-Based Nutrition)</h3>
+          <p class="philo-desc">
+            최신 임상영양학 가이드라인(KDRIs, KDIGO, ESPEN)에 기반하여 신장병, 당뇨, 고혈압 등 질환별 병태생리에 맞춘 정밀 영양중재를 수행합니다. 식품성분 데이터베이스를 활용해 나트륨, 칼륨, 인을 분자 단위로 통제합니다.
+          </p>
+        </div>
+
+        <div class="philosophy-card">
+          <div class="philo-icon">✨</div>
+          <h3 class="philo-title">철저한 위생과 HACCP 관리 (Zero-Defect Hygiene)</h3>
+          <p class="philo-desc">
+            단체급식의 기본은 타협 없는 안전입니다. 식재료 입고 검수부터 가열 중심온도 85℃ 유지, 교차오염 방지 3색 동선 분리까지 전 조리 공정에 걸친 체계적인 CCP 위해요소 제어로 안전한 급식을 보장합니다.
+          </p>
+        </div>
+
+        <div class="philosophy-card">
+          <div class="philo-icon">🍲</div>
+          <h3 class="philo-title">치유와 미식을 함께 담는 레시피 R&D</h3>
+          <p class="philo-desc">
+            치료식이나 저염식이 '맛없다'는 편견을 깹니다. 채소 수침 전처리법, 천연 감칠맛 스톡, 저온 수비드 조리법 등을 연구하여 영양 제한 기준을 완벽히 지키면서도 한 끼의 즐거움을 지켜드립니다.
+          </p>
+        </div>
+
+        <div class="philosophy-card">
+          <div class="philo-icon">💬</div>
+          <h3 class="philo-title">눈높이에 맞춘 따뜻한 공감 상담</h3>
+          <p class="philo-desc">
+            환자와 식수자의 식습관은 단기간에 바뀌기 어렵습니다. 어려운 의학 용어 대신 직관적인 시각자료와 실천 가능한 1:1 라이프스타일 코칭으로 대상자가 스스로 식탁의 변화를 즐길 수 있도록 돕습니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Projects Section
+       ========================================================================== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Key Projects & Research</span>
+        <h2 class="section-title">주요 식단 설계 및 영양 프로젝트</h2>
+        <p class="section-subtitle">학부 4년간 수행한 임상영양, 단체급식, 식품R&D, 지역사회 영양 연구 산출물입니다. 카드를 클릭하면 상세 보고서를 확인할 수 있습니다.</p>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="project-filter-bar">
+        <button class="filter-btn active" data-filter="all">전체보기</button>
+        <button class="filter-btn" data-filter="clinical">임상영양 · 치료식</button>
+        <button class="filter-btn" data-filter="foodservice">단체급식 · HACCP</button>
+        <button class="filter-btn" data-filter="rd">식품 R&D · 메뉴개발</button>
+        <button class="filter-btn" data-filter="community">지역사회 · 상담</button>
+      </div>
+
+      <!-- Projects Grid (Populated dynamically) -->
+      <div class="projects-grid" id="projects_container">
+        <!-- JS generates project cards here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FEATURE 1: Interactive Meal Tray Simulator (스마트 식단 식판 시뮬레이터)
+       ========================================================================== -->
+  <section class="section section-bg-subtle" id="simulator">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Interactive Simulation</span>
+        <h2 class="section-title">스마트 급식 식판 시뮬레이터</h2>
+        <p class="section-subtitle">
+          김지우가 설계한 메뉴들을 5구 급식 식판에 직접 담아보세요.<br>
+          실시간 영양소(열량, 탄·단·지, 나트륨) 합산과 함께 영양사의 임상 적합도 판정 결과를 즉시 확인하실 수 있습니다.
+        </p>
+      </div>
+
+      <div class="simulator-container">
+        <div class="simulator-grid">
+          <!-- Meal Tray Interactive Graphic -->
+          <div class="tray-wrapper">
+            <div class="tray-title-bar">
+              <div class="tray-title">
+                <span>🍽️</span>
+                <span>영양 맞춤 1식 5찬 식판</span>
+              </div>
+              <div class="preset-selector">
+                <button class="btn-preset active" data-preset="clinical">신장질환 저칼륨식</button>
+                <button class="btn-preset" data-preset="balanced">병원 500인 표준식</button>
+                <button class="btn-preset" data-preset="lowgi">저속노화 Low-GI</button>
+                <button class="btn-preset" data-preset="senior">어르신 연하케어식</button>
+              </div>
+            </div>
+
+            <!-- Stainless Tray Graphic -->
+            <div class="meal-tray-graphic">
+              <!-- Top Row: 3 Side Dishes -->
+              <div class="tray-top-row">
+                <!-- Slot 1: Main Side -->
+                <div class="tray-slot">
+                  <span class="slot-label">메인 주찬</span>
+                  <div class="slot-item-name" id="name_slot_main">단호박 찜닭가슴살</div>
+                  <div class="slot-item-cal" id="cal_slot_main">220 kcal</div>
+                  <select class="slot-select-dropdown" id="select_slot_main" aria-label="메인 요리 선택"></select>
+                </div>
+
+                <!-- Slot 2: Sub Side 1 -->
+                <div class="tray-slot">
+                  <span class="slot-label">부찬 1</span>
+                  <div class="slot-item-name" id="name_slot_side1">데친 청경채 무침</div>
+                  <div class="slot-item-cal" id="cal_slot_side1">35 kcal</div>
+                  <select class="slot-select-dropdown" id="select_slot_side1" aria-label="부찬 1 선택"></select>
+                </div>
+
+                <!-- Slot 3: Sub Side 2 / Kimchi -->
+                <div class="tray-slot">
+                  <span class="slot-label">김치 / 채소찬</span>
+                  <div class="slot-item-name" id="name_slot_side2">저염 오이소박이</div>
+                  <div class="slot-item-cal" id="cal_slot_side2">25 kcal</div>
+                  <select class="slot-select-dropdown" id="select_slot_side2" aria-label="김치/채소찬 선택"></select>
+                </div>
+              </div>
+
+              <!-- Bottom Row: Rice & Soup -->
+              <div class="tray-bottom-row">
+                <!-- Slot 4: Rice -->
+                <div class="tray-slot slot-staple">
+                  <span class="slot-label">주식 (밥 / 영양죽)</span>
+                  <div class="slot-item-name" id="name_slot_rice">수침 백미밥 (저칼륨)</div>
+                  <div class="slot-item-cal" id="cal_slot_rice">310 kcal</div>
+                  <select class="slot-select-dropdown" id="select_slot_rice" aria-label="주식 선택"></select>
+                </div>
+
+                <!-- Slot 5: Soup -->
+                <div class="tray-slot slot-soup">
+                  <span class="slot-label">국 / 탕</span>
+                  <div class="slot-item-name" id="name_slot_soup">데친 무 맑은 쇠고기탕</div>
+                  <div class="slot-item-cal" id="cal_slot_soup">75 kcal</div>
+                  <select class="slot-select-dropdown" id="select_slot_soup" aria-label="국/탕 선택"></select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Real-Time Stats & Clinical Feedback -->
+          <div class="simulator-stats">
+            <div class="stats-title">
+              <span>식단 영양 분석표</span>
+              <span style="font-size:0.8rem; font-weight:600; color:var(--primary); background:var(--primary-bg); padding:4px 10px; border-radius:12px;">실시간 계산</span>
+            </div>
+
+            <div class="total-calorie-hero">
+              <div class="total-calorie-num" id="tray_total_cal">665</div>
+              <div class="total-calorie-label">총 섭취 열량 (kcal)</div>
+            </div>
+
+            <div class="macro-breakdown">
+              <!-- Carb -->
+              <div class="macro-bar-item">
+                <div class="macro-bar-header">
+                  <span style="color:#2563EB;">탄수화물</span>
+                  <span id="tray_carb_g">92.7g</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill fill-carb" id="bar_carb" style="width: 75%;"></div>
+                </div>
+              </div>
+
+              <!-- Protein -->
+              <div class="macro-bar-item">
+                <div class="macro-bar-header">
+                  <span style="color:#059669;">단백질</span>
+                  <span id="tray_protein_g">43.3g</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill fill-protein" id="bar_protein" style="width: 80%;"></div>
+                </div>
+              </div>
+
+              <!-- Fat -->
+              <div class="macro-bar-item">
+                <div class="macro-bar-header">
+                  <span style="color:#D97706;">지방</span>
+                  <span id="tray_fat_g">9.3g</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill fill-fat" id="bar_fat" style="width: 35%;"></div>
+                </div>
+              </div>
+
+              <!-- Sodium -->
+              <div class="macro-bar-item">
+                <div class="macro-bar-header">
+                  <span style="color:#DC2626;">나트륨 (Na)</span>
+                  <span id="tray_sodium_mg">510mg</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill fill-sodium" id="bar_sodium" style="width: 45%;"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dietitian Clinical Note -->
+            <div class="dietitian-judgment">
+              <div class="judgment-header" id="judgment_title">
+                🌿 <strong>[임상 판정] 저나트륨·신장보호 우수 식단</strong>
+              </div>
+              <p class="judgment-text" id="judgment_desc">
+                1회 나트륨이 550mg 이하로 철저히 제한되었으며, 수침 조리를 통해 칼륨 배출을 유도하여 만성신장질환(CKD) 환자에게 적합합니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FEATURE 2: Nutrition & TDEE / Macro Calculator (영양 및 대사량 계산기)
+       ========================================================================== -->
+  <section class="section" id="calculator">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Clinical Formula</span>
+        <h2 class="section-title">1:1 맞춤 영양 & 대사량(TDEE) 계산기</h2>
+        <p class="section-subtitle">
+          신체 계측치와 활동 수준을 입력하면 미국영양사협회(ADA) 공인 Mifflin-St Jeor 공식을 적용하여<br>
+          기초대사량(BMR), 1일 필요 에너지(TDEE), 탄단지 권장 섭취량을 계산해드립니다.
+        </p>
+      </div>
+
+      <div class="calculator-card">
+        <div class="calc-grid">
+          <!-- Input Form -->
+          <div class="calc-form">
+            <div class="form-group">
+              <label class="form-label">생물학적 성별</label>
+              <div class="radio-pill-group">
+                <label>
+                  <input type="radio" name="calc_gender" value="female" checked>
+                  <span class="radio-pill-label">여성 (Female)</span>
+                </label>
+                <label>
+                  <input type="radio" name="calc_gender" value="male">
+                  <span class="radio-pill-label">남성 (Male)</span>
+                </label>
+              </div>
+            </div>
+
+            <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:12px;">
+              <div class="form-group">
+                <label class="form-label" for="calc_age">나이 (만)</label>
+                <input type="number" id="calc_age" class="form-control" value="24" min="10" max="100">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="calc_height">신장 (cm)</label>
+                <input type="number" id="calc_height" class="form-control" value="165" min="100" max="230">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="calc_weight">체중 (kg)</label>
+                <input type="number" id="calc_weight" class="form-control" value="55" min="30" max="200">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="calc_activity">평소 활동량 수준</label>
+              <select id="calc_activity" class="form-control">
+                <option value="1.2">비활동적 (주로 앉아서 생활, 운동 거의 안 함)</option>
+                <option value="1.375">가벼운 활동 (주 1~3회 가벼운 걷기 및 스트레칭)</option>
+                <option value="1.55" selected>보통 활동 (주 3~5회 규칙적 운동 / 활발한 일상)</option>
+                <option value="1.725">적극적 활동 (주 6~7회 강도 높은 운동)</option>
+                <option value="1.9">매우 적극적 (운동선수 또는 육체노동 중심)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="calc_goal">영양 관리 목적</label>
+              <select id="calc_goal" class="form-control">
+                <option value="maintenance" selected>체중 및 건강 유지 (균형 영양)</option>
+                <option value="weight_loss">건강한 체지방 감량 (-400 kcal)</option>
+                <option value="muscle_gain">근육량 증가 및 벌크업 (+350 kcal)</option>
+                <option value="blood_sugar">혈당 스파이크 예방 & 저속노화</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Result Display -->
+          <div class="calc-result-box">
+            <div>
+              <div class="calc-result-header">
+                <h4>분석 결과 및 목표 섭취량</h4>
+                <p style="font-size:0.85rem; color:var(--text-muted);">Mifflin-St Jeor 식 적용 산출치</p>
+              </div>
+
+              <div style="margin-bottom:12px;">
+                <span style="font-size:0.85rem; font-weight:700; color:var(--text-muted);">기초대사량 (BMR):</span>
+                <strong style="color:var(--text-main); font-size:1.05rem;" id="calc_bmr_val">1,304</strong> kcal
+              </div>
+
+              <div class="tdee-highlight">
+                <div>
+                  <div style="font-size:0.85rem; font-weight:700; color:var(--primary-deep);">목표 하루 에너지 (TDEE):</div>
+                  <span class="tdee-val" id="calc_tdee_val">2,021</span>
+                  <span class="tdee-unit">kcal / 일</span>
+                </div>
+              </div>
+
+              <!-- Macro Breakdown Cards -->
+              <div class="macro-chart-grid">
+                <div class="macro-box">
+                  <div class="macro-box-title">탄수화물 (50%)</div>
+                  <div class="macro-box-val val-carb" id="calc_carb_val">253g</div>
+                  <span style="font-size:0.75rem; color:var(--text-light);">복합곡물 권장</span>
+                </div>
+
+                <div class="macro-box">
+                  <div class="macro-box-title">단백질 (25%)</div>
+                  <div class="macro-box-val val-protein" id="calc_protein_val">126g</div>
+                  <span style="font-size:0.75rem; color:var(--text-light);">고생물가 단백질</span>
+                </div>
+
+                <div class="macro-box">
+                  <div class="macro-box-title">지방 (25%)</div>
+                  <div class="macro-box-val val-fat" id="calc_fat_val">56g</div>
+                  <span style="font-size:0.75rem; color:var(--text-light);">불포화지방 중심</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="advice-quote" id="calc_advice_text">
+              💡 건강한 현상 유지를 위해 규칙적인 3끼 식사와 균형 잡힌 5대 영양소 섭취를 지켜주세요.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Competency & Qualifications Section
+       ========================================================================== -->
+  <section class="section section-bg-subtle" id="competency">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Competency & Credentials</span>
+        <h2 class="section-title">자격 면허 및 전문 역량</h2>
+        <p class="section-subtitle">임상 현장과 단체급식 현장에서 즉시 1인분 이상의 가치를 발휘할 수 있는 실무 준비도입니다.</p>
+      </div>
+
+      <div class="competency-grid">
+        <!-- 1. License & Certs -->
+        <div class="competency-card">
+          <div class="comp-header">
+            <div class="comp-badge">🎖️</div>
+            <h3 class="comp-title">국가공인 면허 및 자격</h3>
+          </div>
+          <ul class="comp-list">
+            <li><span class="check">✔</span> <strong>영양사 국가고시 응시예정</strong> (전국 모의고사 상위 3%)</li>
+            <li><span class="check">✔</span> <strong>위생사 면허</strong> (보건복지부/한국보건의료인국가시험원)</li>
+            <li><span class="check">✔</span> <strong>한식조리기능사</strong> (한국산업인력공단)</li>
+            <li><span class="check">✔</span> <strong>양식조리기능사</strong> (한국산업인력공단)</li>
+            <li><span class="check">✔</span> <strong>컴퓨터활용능력 1급</strong> (대한상공회의소)</li>
+          </ul>
+        </div>
+
+        <!-- 2. Technical & Tools -->
+        <div class="competency-card">
+          <div class="comp-header">
+            <div class="comp-badge">💻</div>
+            <h3 class="comp-title">영양 솔루션 & 데이터 툴</h3>
+          </div>
+          <ul class="comp-list">
+            <li><span class="check">✔</span> <strong>CAN-Pro 5.0 (한국영양학회)</strong>: 식단 평가 및 정밀 분석 능숙</li>
+            <li><span class="check">✔</span> <strong>식품의약품안전처 DB 연동</strong>: 공공 영양성분 데이터 가공</li>
+            <li><span class="check">✔</span> <strong>Excel VLOOKUP & 피벗테이블</strong>: 대량급식 발주 원가 최적화</li>
+            <li><span class="check">✔</span> <strong>SPSS 통계 프로그램</strong>: 환자 임상 영양 중재 효과 분석</li>
+            <li><span class="check">✔</span> <strong>HACCP 중심온도 디지털 로깅</strong>: 위생 모니터링 시스템</li>
+          </ul>
+        </div>
+
+        <!-- 3. Practical Experience -->
+        <div class="competency-card">
+          <div class="comp-header">
+            <div class="comp-badge">🏥</div>
+            <h3 class="comp-title">임상 및 현장 실습</h3>
+          </div>
+          <ul class="comp-list">
+            <li><span class="check">✔</span> <strong>대학병원 영양팀 임상영양실습</strong>: 240시간 수료 (우수 평가)</li>
+            <li><span class="check">✔</span> <strong>신장질환 & 암환자 라운딩</strong>: 1:1 환자 영양상담 28건 수행</li>
+            <li><span class="check">✔</span> <strong>500인 직원식당 배식·검수</strong>: 전처리실 위생 점검 매뉴얼 개정</li>
+            <li><span class="check">✔</span> <strong>노인복지관 영양교육 캠페인</strong>: 저염 식생활 교실 8회 기획/강의</li>
+            <li><span class="check">✔</span> <strong>교내 캡스톤 R&D 프로젝트</strong>: 기능성 저속노화 도시락 7종 런칭</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Education & Career Timeline -->
+      <div style="margin-top: 60px;">
+        <h3 style="text-align:center; font-size:1.5rem; font-weight:800; color:var(--primary-deep); margin-bottom:32px;">학업 및 주요 활동 연혁</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-date">2022.03 - 현재 (2026.02 졸업예정)</div>
+              <div class="timeline-title">한국대학교 식품영양학과 학사 과정 (누적 평점 4.2 / 4.5)</div>
+              <div class="timeline-desc">
+                임상영양학, 단체급식관리학, 고급생화학, 식사요법 및 실습 전과목 A+ 이수.<br>
+                연속 4회 학과 성적우수 장학금 수혜.
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-date">2025.03 - 2025.08</div>
+              <div class="timeline-title">2025 전국 대학생 영양식단 경진대회 [최우수상] 수상</div>
+              <div class="timeline-desc">
+                보건복지부 후원 전국 공모전에서 '만성 콩팥병 환우를 위한 채소 수침 표준화 저칼륨 치료 식단'을 출품하여 전국 48개 대학 팀 중 1위(최우수상) 수상.
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-date">2025.06 - 2025.08</div>
+              <div class="timeline-title">상급종합병원 영양팀 임상 및 단체급식 하계 집중 실습 (240시간)</div>
+              <div class="timeline-desc">
+                임상치료식 조리 검수, 연하곤란식 점도 테스트, 조리실 HACCP 교차오염 방지 3색 테이핑 동선 개선 제안 채택.
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-date">2024.03 - 2024.12</div>
+              <div class="timeline-title">지역사회 노인 영양 서포터즈 팀장 & 캡스톤 디자인 [은상]</div>
+              <div class="timeline-desc">
+                성북구 노인종합복지관 어르신 대상 연하보조식 15종 개발 및 1:1 방문 영양상담 진행.
+                2030 직장인 저속노화 도시락 7종 개발로 교내 캡스톤 디자인 경진대회 은상 수상.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Contact & Inquiry Section
+       ========================================================================== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Get in Touch</span>
+        <h2 class="section-title">채용 문의 및 영양 상담 제안</h2>
+        <p class="section-subtitle">
+          병원 임상영양사, 단체급식 관리자, 헬스케어 영양 솔루션 연구원 포지션 제안이나<br>
+          식단 자문 및 특강 관련 문의를 남겨주시면 정성을 다해 회신드리겠습니다.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Info Card -->
+        <div class="contact-info-card">
+          <h3 class="contact-info-title">함께 건강한 가치를<br>만들어가겠습니다</h3>
+          <p class="contact-info-desc">
+            준비된 성실함과 전문 지식으로 환자와 식수자에게 신뢰받는 영양사가 되겠습니다. 언제든 편하게 연락 부탁드립니다.
+          </p>
+
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div>
+              <div class="contact-label">이메일 (Email)</div>
+              <div class="contact-val">jiwoo.nutrition@email.com</div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <div class="contact-label">활동 가능 지역</div>
+              <div class="contact-val">서울 / 수도권 전 지역</div>
+            </div>
+          </div>
+
+          <div style="margin-top:36px; padding-top:24px; border-top: 1px solid rgba(255,255,255,0.15);">
+            <div style="font-size:0.85rem; color:#A7F3D0; margin-bottom:8px;">💡 데이터베이스 연동 정보</div>
+            <div style="font-size:0.8rem; color:#FFFFFF; opacity:0.85; line-height:1.5;">
+              문의 내용은 SQLite (portfolio.db) 데이터베이스에 안전하게 기록 및 처리됩니다.
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form Card -->
+        <div class="contact-form-card">
+          <form id="contact_form">
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px;">
+              <div class="form-group">
+                <label class="form-label" for="contact_name">성함 / 담당자명 *</label>
+                <input type="text" id="contact_name" class="form-control" placeholder="홍길동" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contact_email">회신받으실 이메일 *</label>
+                <input type="email" id="contact_email" class="form-control" placeholder="example@hospital.or.kr" required>
+              </div>
+            </div>
+
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px;">
+              <div class="form-group">
+                <label class="form-label" for="contact_org">소속 기관 / 기업명</label>
+                <input type="text" id="contact_org" class="form-control" placeholder="○○대학교병원 / 웰푸드">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contact_category">문의 유형</label>
+                <select id="contact_category" class="form-control">
+                  <option value="recruit" selected>신규 영양사 채용 제안</option>
+                  <option value="consultation">임상 식단 상담 및 자문</option>
+                  <option value="lecture">영양 교육 및 세미나 특강</option>
+                  <option value="other">기타 프로젝트 제휴</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact_message">문의 내용 *</label>
+              <textarea id="contact_message" class="form-control" rows="5" placeholder="채용 전형 안내 또는 문의하실 내용을 상세히 적어주세요." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary" style="width:100%; justify-content:center;">
+              <span>메시지 전송하기</span>
+              <span>✉️</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Project Detail Modal
+       ========================================================================== -->
+  <div class="modal-backdrop" id="project_modal">
+    <div class="modal-content">
+      <button class="modal-close-btn" onclick="closeProjectModal()" aria-label="닫기">&times;</button>
+      <div class="modal-body" id="modal_body_content">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Toast Container
+       ========================================================================== -->
+  <div class="toast-container" id="toast_container"></div>
+
+  <!-- ==========================================================================
+       Footer
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-logo">
+          🌿 김지우 | 예비 영양사 포트폴리오
+        </div>
+        <div style="display:flex; gap:16px;">
+          <button class="btn-print-nav btn-print-trigger" style="background:#1E293B; color:#FFFFFF; border-color:#334155;">
+            포트폴리오 인쇄
+          </button>
+          <a href="#hero" style="color:#A7F3D0; font-weight:700; display:flex; align-items:center;">
+            맨 위로 &uarr;
+          </a>
+        </div>
+      </div>
+      <p class="footer-credit">
+        © 2026 Kim Ji-woo. All Rights Reserved. 식품영양학과 4학년 김지우의 포트폴리오 웹사이트.<br>
+        SQLite Database (portfolio.db) &amp; Media Directory Architecture Applied.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/api.js"></script>
+  <script src="js/calculator.js"></script>
+  <script src="js/main.js"></script>
+<p style="text-align:center;font-size:0.85rem;margin:16px;">이 사이트는 특강용 가상 인물의 예시입니다</p>
+</body>
+</html>

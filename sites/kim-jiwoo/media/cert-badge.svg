@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goldRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D"/>
+      <stop offset="50%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <linearGradient id="shieldBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#047857"/>
+      <stop offset="100%" stop-color="#064E3B"/>
+    </linearGradient>
+    <filter id="badgeShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#064E3B" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Ribbon / Rays -->
+  <circle cx="100" cy="100" r="90" fill="url(#goldRing)" filter="url(#badgeShadow)"/>
+  <circle cx="100" cy="100" r="82" fill="#FFFFFF"/>
+  <circle cx="100" cy="100" r="76" fill="url(#shieldBg)"/>
+
+  <!-- Inner Stars -->
+  <g fill="#FDE68A">
+    <circle cx="100" cy="35" r="2.5"/>
+    <circle cx="50" cy="55" r="2.5"/>
+    <circle cx="150" cy="55" r="2.5"/>
+  </g>
+
+  <!-- Nutrition Wheat & Health Caduceus Icon -->
+  <g stroke="#FDE68A" stroke-width="2.5" fill="none" stroke-linecap="round">
+    <!-- Center Staff -->
+    <line x1="100" y1="58" x2="100" y2="125"/>
+    <!-- Bowl of Hygieia / Nutrition Leaf -->
+    <path d="M 75 88 C 75 110, 125 110, 125 88"/>
+    <path d="M 85 88 L 115 88"/>
+    <!-- Leaves -->
+    <path d="M 100 68 C 90 62, 85 75, 100 80" fill="#34D399"/>
+    <path d="M 100 68 C 110 62, 115 75, 100 80" fill="#34D399"/>
+  </g>
+
+  <!-- Text -->
+  <text x="100" y="145" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="12" font-weight="800" fill="#FFFFFF" letter-spacing="1">NATIONAL</text>
+  <text x="100" y="160" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="10" font-weight="700" fill="#A7F3D0" letter-spacing="1.5">DIETITIAN</text>
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="warmWood" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FEF3C7"/>
+      <stop offset="100%" stop-color="#FDE68A"/>
+    </linearGradient>
+    <filter id="softShad" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#78350F" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="400" fill="#FFFBEB" rx="16"/>
+
+  <!-- Senior Care Tray -->
+  <rect x="50" y="40" width="500" height="320" rx="28" fill="#FFFFFF" stroke="#FBBF24" stroke-width="2.5" filter="url(#softShad)"/>
+
+  <!-- Tag: IDDSI Level 4 Pureed / Smooth -->
+  <rect x="75" y="65" width="230" height="32" rx="16" fill="#F59E0B"/>
+  <text x="90" y="86" fill="#FFFFFF" font-family="'Pretendard', sans-serif" font-size="12" font-weight="700">연하난이도 3단계 (IDDSI Lv.4 연식)</text>
+
+  <!-- Bowl 1: Silken Tofu & Sweet Pumpkin Porridge (Mousse) -->
+  <g transform="translate(85, 120)">
+    <circle cx="80" cy="80" r="70" fill="#FEF08A" stroke="#F59E0B" stroke-width="3"/>
+    <circle cx="80" cy="80" r="62" fill="#FBBF24" opacity="0.65"/>
+    <ellipse cx="80" cy="76" rx="48" ry="32" fill="#F59E0B" opacity="0.8"/>
+    <!-- Cream swirl decoration -->
+    <path d="M 60 70 Q 80 90 95 65" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" fill="none"/>
+    <circle cx="80" cy="65" r="5" fill="#EF4444"/>
+    <text x="80" y="175" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="12" font-weight="700" fill="#78350F">단호박 두부 타락죽</text>
+    <text x="80" y="190" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="10" fill="#B45309">부드러운 삼킴 / 단백질 12g</text>
+  </g>
+
+  <!-- Bowl 2: Bulgogi Puree / Soft Beef Mousse -->
+  <g transform="translate(250, 120)">
+    <circle cx="70" cy="70" r="60" fill="#FDE68A" stroke="#D97706" stroke-width="2.5"/>
+    <circle cx="70" cy="70" r="52" fill="#D97706" opacity="0.4"/>
+    <!-- Mousse Texture -->
+    <ellipse cx="70" cy="68" rx="40" ry="28" fill="#B45309" opacity="0.75"/>
+    <circle cx="60" cy="65" r="8" fill="#92400E"/>
+    <circle cx="80" cy="70" r="7" fill="#78350F"/>
+    <path d="M 55 60 Q 70 50 85 62" stroke="#FEF3C7" stroke-width="2.5" fill="none"/>
+    <text x="70" y="155" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="12" font-weight="700" fill="#78350F">소고기 영양 무스</text>
+    <text x="70" y="170" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="10" fill="#B45309">점도증진제 최적비율 배합</text>
+  </g>
+
+  <!-- Bowl 3: Spinach & Apple Gel / Puree -->
+  <g transform="translate(405, 120)">
+    <circle cx="65" cy="65" r="55" fill="#DCFCE7" stroke="#16A34A" stroke-width="2.5"/>
+    <ellipse cx="65" cy="65" rx="45" ry="32" fill="#22C55E" opacity="0.75"/>
+    <path d="M 50 60 Q 65 75 80 58" stroke="#BBF7D0" stroke-width="3" fill="none"/>
+    <text x="65" y="145" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="12" font-weight="700" fill="#14532D">사과 시금치 겔(Gel)</text>
+    <text x="65" y="160" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="10" fill="#166534">사각거림 없는 식이섬유</text>
+  </g>
+
+  <!-- Senior Care Spec note -->
+  <g transform="translate(75, 290)">
+    <rect width="450" height="38" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1"/>
+    <text x="20" y="24" font-family="'Pretendard', sans-serif" font-size="12" font-weight="600" fill="#92400E">✔ 지역사회 어르신 복지관 30인 실증 임상 적용 및 연하검사 만족도 94.2% 달성</text>
+  </g>
+</svg>

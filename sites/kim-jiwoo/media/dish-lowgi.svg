@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bowlBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDFBF7"/>
+      <stop offset="100%" stop-color="#F5EBE1"/>
+    </linearGradient>
+    <filter id="saladShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#1E3A1E" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="400" fill="#F4FBF7" rx="16"/>
+
+  <!-- Eco Craft Bento Box / Bowl -->
+  <circle cx="300" cy="200" r="165" fill="#EAD9C8" filter="url(#saladShadow)"/>
+  <circle cx="300" cy="200" r="150" fill="url(#bowlBg)" stroke="#D8C3AE" stroke-width="3"/>
+
+  <!-- Base Greens (Kale & Baby Spinach) -->
+  <path d="M190 200 C170 150, 240 120, 270 160 C250 190, 210 230, 190 200 Z" fill="#22C55E" opacity="0.8"/>
+  <path d="M220 160 C240 110, 310 120, 310 170 C280 190, 230 190, 220 160 Z" fill="#16A34A" opacity="0.85"/>
+  <path d="M170 220 C180 270, 260 260, 240 210 Z" fill="#15803D" opacity="0.75"/>
+
+  <!-- Sous-vide Salmon (Healthy Protein & Omega-3) -->
+  <g transform="translate(300, 100)">
+    <path d="M 10 20 C 40 10, 80 25, 95 55 C 85 85, 30 75, 10 50 Z" fill="#FB923C"/>
+    <!-- Salmon Grill / Fat Stripes -->
+    <path d="M 25 28 Q 50 40 70 30" stroke="#FDBA74" stroke-width="3" fill="none"/>
+    <path d="M 30 45 Q 60 55 85 45" stroke="#FDBA74" stroke-width="3" fill="none"/>
+    <path d="M 25 60 Q 55 70 75 60" stroke="#FDBA74" stroke-width="3" fill="none"/>
+    <text x="50" y="90" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="11" font-weight="700" fill="#9A3412">수비드 연어 (120g)</text>
+  </g>
+
+  <!-- Avocado Slices (Healthy Fats) -->
+  <g transform="translate(180, 230)">
+    <ellipse cx="40" cy="25" rx="32" ry="14" fill="#84CC16" transform="rotate(-25 40 25)"/>
+    <ellipse cx="42" cy="25" rx="28" ry="10" fill="#BEF264" transform="rotate(-25 40 25)"/>
+    <ellipse cx="50" cy="40" rx="32" ry="14" fill="#84CC16" transform="rotate(-15 50 40)"/>
+    <ellipse cx="52" cy="40" rx="28" ry="10" fill="#BEF264" transform="rotate(-15 50 40)"/>
+  </g>
+
+  <!-- Quinoa & Lentils Bed -->
+  <g transform="translate(320, 210)">
+    <ellipse cx="45" cy="45" rx="45" ry="30" fill="#D97706" opacity="0.4"/>
+    <circle cx="20" cy="40" r="4" fill="#B45309"/>
+    <circle cx="35" cy="32" r="3.5" fill="#78350F"/>
+    <circle cx="50" cy="45" r="4" fill="#B45309"/>
+    <circle cx="65" cy="35" r="3" fill="#92400E"/>
+    <circle cx="40" cy="55" r="3.5" fill="#78350F"/>
+    <circle cx="60" cy="52" r="4" fill="#B45309"/>
+    <text x="45" y="80" text-anchor="middle" font-family="'Pretendard', sans-serif" font-size="11" font-weight="700" fill="#78350F">3색 퀴노아 렌틸볼</text>
+  </g>
+
+  <!-- Cherry Tomatoes -->
+  <circle cx="275" cy="185" r="14" fill="#EF4444"/>
+  <ellipse cx="271" cy="180" rx="3" ry="5" fill="#FECACA"/>
+  <circle cx="300" cy="195" r="13" fill="#DC2626"/>
+  <ellipse cx="297" cy="190" rx="3" ry="4" fill="#FECACA"/>
+
+  <!-- Boiled Egg Half -->
+  <ellipse cx="235" cy="140" rx="22" ry="16" fill="#FFFFFF"/>
+  <circle cx="235" cy="140" r="10" fill="#FBBF24"/>
+
+  <!-- Top Badge / Card Info -->
+  <g transform="translate(30, 30)">
+    <rect width="180" height="42" rx="10" fill="#FFFFFF" stroke="#10B981" stroke-width="1.5" filter="url(#saladShadow)"/>
+    <text x="12" y="19" font-family="'Pretendard', sans-serif" font-size="11" font-weight="700" fill="#047857">혈당 스파이크 방지 설계</text>
+    <text x="12" y="33" font-family="'Pretendard', sans-serif" font-size="12" font-weight="800" fill="#0F172A">Low-GI 웰니스 볼 (485 kcal)</text>
+  </g>
+</svg>
